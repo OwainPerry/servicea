@@ -9,4 +9,5 @@ RUN go build -o /app/servicea .
 
 FROM alpine:3.9
 COPY --from=builder /app/servicea /servicea
+EXPOSE 8080
 CMD ["/servicea"]
